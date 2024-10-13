@@ -8,31 +8,42 @@
   </head>
   <body>
     <div class="container">
-      <h1>Retail Transaction</h1>
       <form id="transactionForm">
         <fieldset>
           <legend>Retail Transaction</legend>
 
-          <label for="itemName">Name : </label>
-          <input type="text" required />
+          <div class="form-group">
+            <label for="itemName">Item Name : </label>
+            <input type="text" id="itemName" name="itemName" required/>
+          </div>
 
-          <label for="quantity">Quantity : </label>
-          <input type="number" name="quantity" id="quantity" min="1" required />
+          <div class="form-group">
+            <label for="quantity">Quantity Sold : </label>
+            <input type="number" name="quantity" id="quantity" min="1" required />
+          </div>
 
-          <label for="price">Price: </label>
-          <input type="number" id="price" step="0.01" min="0" required />
+          <div class="form-group">
+            <label for="price">Price: </label>
+            <input type="number" id="price" step="0.01" min="0" required />
+          </div>
 
-          <label for="total">Total (VAT incl) : </label>
-          <input type="number" id="total" name="total" readonly />
+          <div class="form-group">
+            <label for="total">Total (VAT incl) : </label>
+            <input type="number" id="total" name="total" readonly />
+          </div>
 
-          <label for="cashIn">Cash In : </label>
-          <input type="number" id="cashIn" step="0.01" min="0" required />
+          <div class="form-group">
+            <label for="cashIn">Cash In : </label>
+            <input type="number" id="cashIn" name="cashIn" step="0.01" min="0" required />
+          </div>
 
-          <label for="balance">Balance : </label>
-          <input type="number" name="balance" id="balance" readonly />
+          <div class="form-group">
+            <label for="balance">Balance : </label>
+            <input type="number" name="balance" id="balance" readonly />
+          </div>
 
           <div class="buttons">
-            <button type="button" id="calculate">Calculate</button>
+            <button type="button" id="calculateBtn">Calculate</button>
             <button type="reset">Clear</button>
           </div>
         </fieldset>
